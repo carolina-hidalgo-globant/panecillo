@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
-import MenuItems from './reducer_menuitems'
+import { combineReducers } from 'react-redux';
+import MenuItems from './reducer_main_menu_items';
 
 const rootReducer = combineReducers({
   menuItems: MenuItems

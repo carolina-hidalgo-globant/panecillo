@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectMenuItem } from '../actions/index';
+import { selectMenuItem } from '../actions';
 import { bindActionCreators } from 'redux';
 
-class MenuItems extends Component {
+class MainMenuItems extends Component {
   renderList() {
     return this.props.menuItems.map((item) => {
       return(

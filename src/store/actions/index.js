@@ -5,11 +5,10 @@ export const FETCH_OTHER_MENU_ITEMS = 'fetch_other_menu_items';
 
 const ROOT_URL = 'https://nr3zj.mocklab.io/recommended';
 
-export function fetchMainMenuItems() {
-  const request = axios.get(`${ROOT_URL}/season`);
+export function fetchMainMenuItems(response) {
   return {
     type: FETCH_MAIN_MENU_ITEMS,
-    payload: request,
+    payload: response,
   };
 }
 

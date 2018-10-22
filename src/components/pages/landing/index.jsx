@@ -34,7 +34,8 @@ class LandingContainer extends Component {
 LandingContainer.propTypes = {
   actions: PropTypes.any.isRequired,
   menuItemsReducer: PropTypes.shape({
-    mainMenuItems: PropTypes.object.isRequired,
+    mainMenuItems: PropTypes.any.isRequired,
+    otherMenuItems: PropTypes.any.isRequired,
   }).isRequired,
 };
 

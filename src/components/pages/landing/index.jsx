@@ -17,20 +17,24 @@ class LandingContainer extends Component {
   fetchItems = () => {
     const { actions } = this.props;
     axios.get(`${ROOT_URL}/season`)
-      .then(items => actions.mainMenuItems.fetchMainMenuItems(items.data.data))
+      .then(mainItems => actions.mainMenuItems.fetchMainMenuItems(mainItems.data.data))
+      .catch(e => console.error(e));
+
+    axios.get(`${ROOT_URL}/others`)
+      .then(otherItems => actions.otherMenuItems.fetchOtherMenuItems(otherItems.data.data))
       .catch(e => console.error(e));
   }
 
   render() {
-    const { menuItemsReducer: { mainItems } } = this.props;
-    return (<><HeaderOrg items={mainItems} /></>);
+    const { menuItemsReducer: { mainMenuItems, otherMenuItems } } = this.props;
+    return (<><HeaderOrg mainItems={mainMenuItems} otherItems={otherMenuItems} /></>);
   }
 }
 
 LandingContainer.propTypes = {
   actions: PropTypes.any.isRequired,
   menuItemsReducer: PropTypes.shape({
-    mainItems: PropTypes.object.isRequired,
+    mainMenuItems: PropTypes.object.isRequired,
   }).isRequired,
 };
 
@@ -39,6 +43,7 @@ const mapStateToProps = state => (state);
 const mapDispatchToProps = dispatch => ({
   actions: {
     mainMenuItems: bindActionCreators(Actions, dispatch),
+    otherMenuItems: bindActionCreators(Actions, dispatch),
   },
 });
 

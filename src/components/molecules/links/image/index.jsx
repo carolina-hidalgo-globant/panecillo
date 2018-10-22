@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ItemImage from '../../../atoms/item_image';
+import ItemImage from '../../../atoms/_item_image';
 
 function ImageLinksMole({ title, image }) {
   return (
     <li>
-      <span>{title}</span>
       <ItemImage src={image} alt={title} title={title} />
+      <span>{title}</span>
     </li>
   );
 }

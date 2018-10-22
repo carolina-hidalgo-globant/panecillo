@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function ItemTitle(props) {
   const menuName = props;
   return (
-    <span>
+    <h3>
       {menuName}
-    </span>
+    </h3>
   );
 }
 

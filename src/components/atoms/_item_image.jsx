@@ -1,9 +1,10 @@
 import React from 'react';
+import { Image } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 function ItemImage(props) {
   const { alt } = props;
-  return (<img {...props} alt={alt} />);
+  return (<Image {...props} alt={alt} responsive />);
 }
 
 ItemImage.defaultProps = {

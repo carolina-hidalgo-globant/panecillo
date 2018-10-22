@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Nav } from 'react-bootstrap';
 import ItemImage from '../links/image';
 
 function MenuMole({ items }) {
   return (
-    <ul>
+    <Nav bsStyle="pills">
       {items.map(item => (<ItemImage key={item.menu_id} title={item.menu_name} image={item.image_url} />))}
-    </ul>
+    </Nav>
   );
 }
 

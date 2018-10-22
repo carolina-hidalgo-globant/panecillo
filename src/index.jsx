@@ -2,9 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import './index.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import * as serviceWorker from './serviceWorker';
 import LandingContainer from './components/pages/landing';
 import store from './app/store';
+
+
+library.add(faHeart);
 
 const App = (
   <Provider store={store}>

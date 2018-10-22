@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import { Col, Row } from 'react-bootstrap';
 import HeadlineAtm from '../../atoms/_headline';
@@ -11,13 +12,23 @@ function HeaderOrg({ mainItems, otherItems }) {
     <header className={styles.wrapper}>
       <Row>
         <Col xs={12} md={2}>
-          <HeadlineAtm type={2}>Find eCards</HeadlineAtm>
+          <HeadlineAtm className={styles.fontNorican} type={2}>Find eCards</HeadlineAtm>
         </Col>
         <Col xs={12} md={8}>
           <MenuMole items={mainItems} />
         </Col>
         <Col xs={12} md={2}>
-          <SelectMole items={otherItems} />
+          <SelectMole
+            title={
+              (
+                <Fragment>
+                  <FontAwesomeIcon icon="heart" />
+                  Favorites
+                </Fragment>
+              )
+            }
+            items={otherItems}
+          />
         </Col>
       </Row>
     </header>

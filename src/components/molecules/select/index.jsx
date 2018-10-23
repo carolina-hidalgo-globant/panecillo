@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { DropdownButton } from 'react-bootstrap';
-import styles from '../../../panecillo.scss';
+import styles from '../../../scss/molecules/select.scss';
 import ItemOption from '../../atoms/_item_option';
 
 function SelectMole({ title, items }) {
   return (
     <DropdownButton
       id="otherMenu"
-      className={`${styles.otherMenu} ${styles.fontWhite} ${styles.fontPavanam}`}
+      className={`${styles['other-menu']} ${styles['other-menu--smalltext']}`}
       title={title}
       bsSize="large"
     >

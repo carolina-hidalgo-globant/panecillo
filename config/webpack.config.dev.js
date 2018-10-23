@@ -12,8 +12,9 @@ const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const ManifestPlugin = require('webpack-manifest-plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
-
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -370,6 +371,14 @@ module.exports = {
     new ManifestPlugin({
       fileName: 'asset-manifest.json',
       publicPath: publicPath,
+    }),
+    // new ExtractTextPlugin({ filename: 'styles.css', allChunks: true }),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src',
+      files: '**/*.scss',
+      failOnError: false,
+      quiet: false,
     }),
   ],
 

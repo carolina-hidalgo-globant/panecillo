@@ -12,7 +12,7 @@ function HeaderOrg({ mainItems, otherItems }) {
     <header className={styles.wrapper}>
       <Row>
         <Col xs={12} md={2}>
-          <HeadlineAtm className={styles.fontNorican} type={2}>Find eCards</HeadlineAtm>
+          <div className={styles.headline}><HeadlineAtm type={2}>Find eCards</HeadlineAtm></div>
         </Col>
         <Col xs={12} md={8}>
           <MenuMole items={mainItems} />
@@ -23,7 +23,7 @@ function HeaderOrg({ mainItems, otherItems }) {
               (
                 <Fragment>
                   <FontAwesomeIcon icon="heart" />
-                  Favorites
+                  Favorites!!
                 </Fragment>
               )
             }

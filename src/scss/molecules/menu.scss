@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+.menue {
+  li:nth-child(1) span {
+    color: $co-red;
+  }
+
+  li:nth-child(2) span {
+    color: $co-orange;
+  }
+
+  li:nth-child(3) span {
+    color: $co-green;
+  }
+
+  li:nth-child(4) span {
+    color: $co-melon;
+  }
+
+  li:nth-child(5) span {
+    color: $co-blue;
+  }
+}

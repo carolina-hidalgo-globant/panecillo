@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.item_image {
+  transform-origin: 50% 50%;
+  transition: all 100ms linear;
+  width: 100%;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}

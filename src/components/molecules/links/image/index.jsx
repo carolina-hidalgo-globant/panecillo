@@ -2,19 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavItem } from 'react-bootstrap';
 import ItemImage from '../../../atoms/_item_image';
+import styles from '../../../../scss/molecules/nav_item.scss';
 
-function ImageLinksMole({ title, image }) {
+function NavItemMole({ title, image }) {
   return (
-    <NavItem>
+    <NavItem className={styles.nav_item}>
       <span>{title}</span>
       <ItemImage src={image} alt={title} title={title} />
     </NavItem>
   );
 }
 
-ImageLinksMole.propTypes = {
+NavItemMole.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
 
-export default ImageLinksMole;
+export default NavItemMole;

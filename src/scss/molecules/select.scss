@@ -1,13 +1,13 @@
-@import '../variables';
+@import '../variables.scss';
 
 .other-menu {
   background-color: $co-pink;
-  border-radius: 0;
-  border-radius: none;
+  border-radius: 0 !important;
   color: $co-white;
   font-family: $fo-pavanam;
   padding: 15px 20px;
   text-transform: uppercase;
+  border-color: $co-pink;
 
   svg {
     margin-right: 13px;
@@ -18,7 +18,7 @@
   }
 
   &.other-menu--smalltext {
-    font-size: 12px;
+    font-size: 1em;
   }
 }
 

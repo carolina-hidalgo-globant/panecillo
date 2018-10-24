@@ -41,4 +41,4 @@ SkeletonAtm.propTypes = {
   marginLeft: PropTypes.string,
 };
 
-export default Skeleton;
+export default SkeletonAtm;

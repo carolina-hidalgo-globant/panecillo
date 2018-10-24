@@ -11,3 +11,11 @@ $co-white    : #fff;
 // Fonts
 $fo-norican: 'Norican';
 $fo-pavanam: 'Pavanam';
+
+$grid-breakpoints: (
+  xs: 320px,
+  sm: 600px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1280px
+);

@@ -31,7 +31,7 @@ function HeaderOrg({ mainItems, otherItems }) {
           />
         </Col>
       </Row>
-      </Grid>
+    </Grid>
   ) : (<p>Loading...</p>);
 }
 

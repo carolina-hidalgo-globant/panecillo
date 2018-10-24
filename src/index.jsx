@@ -8,7 +8,6 @@ import * as serviceWorker from './serviceWorker';
 import LandingContainer from './components/pages/landing';
 import store from './app/store';
 
-
 library.add(faHeart);
 
 const App = (

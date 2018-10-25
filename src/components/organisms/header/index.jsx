@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import { Col, Row, Grid } from 'react-bootstrap';
-import HeadlineAtm from '../../atoms/_headline';
+import HeadlineAtm from '../../atoms/headline';
 import MenuMole from '../../molecules/menu';
 import SelectMole from '../../molecules/select';
 import SkeletonAtm from '../../atoms/_skeleton';

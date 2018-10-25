@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { DropdownButton } from 'react-bootstrap';
 import styles from '../../../scss/molecules/select.scss';
-import ItemOption from '../../atoms/_item_option';
+import ItemOption from '../../item_option/item_option';
 
 function SelectMole({ title, items }) {
   return (

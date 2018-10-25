@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../../scss/atoms/headline.scss';
+import styles from '../../../scss/atoms/headline.scss';
 
 function HeadlinesAtm(props) {
   const { type, children } = props;

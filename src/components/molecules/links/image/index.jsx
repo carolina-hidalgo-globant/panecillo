@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavItem } from 'react-bootstrap';
-import ItemImage from '../../../atoms/_item_image';
+import ItemImage from '../../../atoms/item_image/item_image';
 import styles from '../../../../scss/molecules/nav_item.scss';
 
 function NavItemMole({ title, image }) {

@@ -18,7 +18,7 @@ function HeadlinesAtm(props) {
 
 HeadlinesAtm.propTypes = {
   type: PropTypes.number.isRequired,
-  children: PropTypes.any.isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default HeadlinesAtm;

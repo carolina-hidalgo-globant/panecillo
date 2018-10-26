@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { mount, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';
 import Adapter from 'enzyme-adapter-react-16';
 
-import HeadlinesAtm from '../index';
-
+import HeadlinesAtm from '../';
+import styles from '../../../../scss/atoms/headline.scss';
 
 chai.use(sinonChai);
 
@@ -16,14 +16,9 @@ describe.only('Test for Headlines', () => {
   let wrapper;
   let textHeadline;
 
-  beforeEach(() => {
-    textHeadline = 'Carolina Test';
-    wrapper = mount(<HeadlinesAtm props={{ children: textHeadline }} type={2} />);
-    console.log(' ----shallow');
-    console.log(wrapper);
-  });
-
   it('renders correctly', () => {
-    expect(wrapper.find('h2').children()).to.be.equal({});
+    textHeadline = 'Carolina Test';
+    wrapper = shallow(<HeadlinesAtm type={2}>{textHeadline}</HeadlinesAtm>);
+    expect(wrapper.find('h2').text()).equal(textHeadline);
   });
 });

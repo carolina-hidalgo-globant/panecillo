@@ -5,20 +5,29 @@ import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';
 import Adapter from 'enzyme-adapter-react-16';
 
-import HeadlinesAtm from '../';
-import styles from '../../../../scss/atoms/headline.scss';
+import HeadlinesAtm from '..';
 
 chai.use(sinonChai);
 
 configure({ adapter: new Adapter() });
 
-describe.only('Test for Headlines', () => {
+describe('Headlines TESTING', () => {
   let wrapper;
-  let textHeadline;
+  let textHeadline = 'Carolina Test';
 
-  it('renders correctly', () => {
-    textHeadline = 'Carolina Test';
-    wrapper = shallow(<HeadlinesAtm type={2}>{textHeadline}</HeadlinesAtm>);
-    expect(wrapper.find('h2').text()).equal(textHeadline);
+  it('Component renders correctly', () => {
+    wrapper = shallow(<HeadlinesAtm type={3}>{textHeadline}</HeadlinesAtm>);
+    expect(wrapper.find('h3').text()).equal(textHeadline);
+  });
+
+  it('If type is incorrect', () => {
+    wrapper = shallow(<HeadlinesAtm type={8}>{textHeadline}</HeadlinesAtm>);
+    expect(wrapper.find('h1').text()).equal(textHeadline);
+  });
+
+  it('If children type is incorrect', () => {
+    textHeadline = 222;
+    wrapper = shallow(<HeadlinesAtm type={8}>{textHeadline}</HeadlinesAtm>);
+    expect(wrapper.find('h1').text()).equal(textHeadline);
   });
 });

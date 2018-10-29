@@ -5,7 +5,6 @@ import { Col, Row, Grid } from 'react-bootstrap';
 import HeadlineAtm from '../../atoms/headline';
 import MenuMole from '../../molecules/menu';
 import SelectMole from '../../molecules/select';
-import SkeletonAtm from '../../atoms/_skeleton';
 import styles from '../../../scss/organisms/header.scss';
 
 function HeaderOrg({ mainItems, otherItems }) {
@@ -34,22 +33,7 @@ function HeaderOrg({ mainItems, otherItems }) {
       </Row>
     </Grid>
   ) : (
-    <Grid>
-      <Row className={styles.headere}>
-        <Col xs={12} md={2}>
-          <SkeletonAtm width={195} height={63} />
-        </Col>
-        <Col xs={12} md={8}>
-          <SkeletonAtm width={145} height={182} />
-          <SkeletonAtm width={145} height={182} />
-          <SkeletonAtm width={145} height={182} />
-          <SkeletonAtm width={145} height={182} />
-        </Col>
-        <Col xs={12} md={2}>
-          <SkeletonAtm width={199} height={40} />
-        </Col>
-      </Row>
-    </Grid>
+    <Grid>loading..</Grid>
   );
 }
 
